@@ -1,0 +1,14 @@
+<h4>Hello, user {{ userId }}</h4>
+
+<ul>
+    <li *ngFor="let msg of messages"> 
+        {{msg.user}} {{ msg.msg }} </li>
+</ul>
+
+<form>
+    <input #msg 
+        (keyup.enter)="sendMessage(msg)"
+        type="text" 
+        name="msg"
+    >
+</form>
